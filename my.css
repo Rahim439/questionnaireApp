@@ -1,0 +1,50 @@
+#optionRadio
+{
+    display :none;
+    clear: both;
+	float: left;
+	margin-top: 7px;
+}
+
+#opt-radio-val
+{
+    padding-left: 10px;
+}
+#ans
+{
+    width:80%;
+	display: inline;
+}
+
+.radio-ans
+{
+    
+	float: right;
+	margin-right: -15px;
+	margin-top: -20px;
+
+}
+
+
+.display-div {
+	background-color: #E3EBF7;
+	margin: -25px 0px 20px 0px;
+	padding: 20px 50px 30px 50px;
+	display: none;
+}
+
+.que-para {
+	padding-top: 20px;
+}
+.edit-btn {
+	margin-right: 10px;
+}
+.del-btn {
+	margin-left: 10px;
+}
+
+
+
+
+
+

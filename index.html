@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet"  type="text/css" href="MDB\css\mdb.min.css">
+    <link rel="stylesheet"  type="text/css" href="my.css">
+  
+    <script type="text/javascript" src="MDB\js\mdb.min.js"></script>
+    <script type="text/javascript" src="my.js"></script>
+
+    
+    
+    <title>Quiz System</title>
+</head>
+<body>
+  
+  
+    <h1 class="text-center">Welcome To Quiz System</h1>
+    <div class="text-center">
+    <button type="button" class="btn btn-primary" data-mdb-toggle="modal" data-mdb-target="#exampleModal">
+    Add Question
+  </button>
+</div>
+
+
+  <p class="question" id="questionValue"></p>
+  <input style="display :none;" type="radio" class="custom-control-input" id="optionRadio" name="groupOfDefaultRadios">
+  
+      <label  id="opt-radio-val" ></label> 
+      
+      
+      <div class="row">
+        <div class="col-12">
+          <div class="display-div" id="result">
+        
+          </div>
+        </div>
+      </div>
+      
+
+  
+
+
+  <!-- original modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Add Question</h5>
+          <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <label class="form-label"> Question </label> <br>
+      					<input type="text"  id="qu" name="question" class="form-control form-control-md">
+                <div class="text-center" id="parent-div">
+                  
+                  <button type="button" onclick="addAnswer()" class="btn btn-primary mt-3">Add Answer</button>
+                  
+                </div>
+        </div>
+        
+          
+        
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" onclick="remove()" data-mdb-dismiss="modal">Close</button>
+          <button type="button" id="click" onclick="data(); remove(); printArrayOnInnerHTML(); resdiv()  " class="btn btn-primary" data-mdb-dismiss="modal">Save changes</button>
+          
+        </div>
+      </div>
+      
+    </div>
+    
+  </div>
+  
+<!-- Popup for edit-->
+
+<div class="modal fade" id="exampleModaledit" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="exampleModalLabel">Add Question</h5>
+    <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+    </div>
+    <div class="modal-body">
+      <label class="form-label"> Question </label> <br>
+      <input type="text" name="question" class="form-control form-control-md" id="question-valedit">
+      <form id="add-ans-form">
+        <label class="form-label mt-3" id="ans-lbl"> Answers </label>
+        <div id="parent-div2">
+          
+        </div>	
+      </form>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">Close</button>
+    <button type="button" class="btn btn-primary" id="save-btn" data-mdb-dismiss="modal">Save changes</button>
+    </div>
+  </div>
+  </div>
+</div>
+
+</body>
+</html>
